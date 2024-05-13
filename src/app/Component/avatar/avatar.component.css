@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Type*/
+.initials {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0066FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+img {
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+/*Size*/
+.large {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.medium {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.small {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  padding: 2px;
+}

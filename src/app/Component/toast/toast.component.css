@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  /*transform: translateX(24px);*/
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+
+  /* opcional
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    */
+}
+
+/*Icon+text+message*/
+.alert-it {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/*Icon*/
+
+.left-icon {
+  font-size: 24px;
+  align-content: center;
+}
+
+
+
+/*Closing button*/
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  color: #252B37;
+  font-size: 16px;
+  align-content: center
+}
+
+/*Message and title*/
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1%;
+}
+
+.message {
+  color: #252B37;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 1%;
+}
+
+/*Type*/
+.info {
+  color: #0066FF;
+  background-color: #D1E3FF;
+  border: 3px solid #0066FF;
+}
+
+.success {
+  color: #00AF3D;
+  background-color: #E6FFEE;
+  border: 3px solid #00AF3D;
+}
+
+.warning {
+  color: #F99107;
+  background-color: #FFFAEB;
+  border: 3px solid #F99107;
+}
+
+.error {
+  color: #F01224;
+  background-color: #FFF1F2;
+  border: 3px solid #F01224;
+}
