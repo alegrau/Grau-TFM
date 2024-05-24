@@ -1,0 +1,12 @@
+<div [ngClass]="classes" class="textarea-container">
+  <div class="label-container" *ngIf="hasLabel">
+    <label for="myTextarea">{{label}}</label>
+    <label for="myTextarea" class="label-counter" *ngIf="hasCounter">{{currentLength}}/{{maxLength}}</label>
+  </div>
+  <div class="subcontainer">
+    <textarea id="myTextarea" [placeholder]="placeholder" (input)="onInput($event)" [maxLength]="maxLength"
+      [disabled]="disabled" (invalid)="error">
+    </textarea>
+    <p class="help-text" *ngIf="hasHelpText">{{helpText}}</p>
+  </div>
+</div>

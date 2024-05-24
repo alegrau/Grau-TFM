@@ -3,7 +3,7 @@ import { BadgeComponent } from './badge.component';
 
 const meta: Meta<BadgeComponent> = {
   component: BadgeComponent,
-  title: 'Badge',
+  title: 'Components/Badge',
   tags: ['autodocs'],
   args: {
     label: "Badge",

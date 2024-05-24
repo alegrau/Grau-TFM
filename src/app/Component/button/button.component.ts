@@ -28,10 +28,10 @@ export class ButtonComponent {
   @Input() leftIcon: string = '';
   @Input() rightIcon: string = '';
 
-  @Input() disabled: boolean = false;
+  @Input() state: "active" | "disabled" = "active";
 
   public get classes(): string[] {
-    return getStyles(this.type, this.size)
+    return getStyles(this.type, this.size, this.state)
 
   }
 

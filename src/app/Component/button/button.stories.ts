@@ -1,14 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/angular';
-import { ButtonComponent } from './button.component';
+import type { Meta, StoryObj } from "@storybook/angular";
+import { ButtonComponent } from "./button.component";
 
 const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
-  title: 'Button',
+  title: 'Components/Button',
   tags: ['autodocs'],
   args: {
-    label: "Button",
     size: { control: 'select', options: ['small', 'medium', 'large'] },
-
+    state: { control: 'select', options: ['active', 'disabled'] }
   }
 } as Meta;
 
@@ -24,7 +23,7 @@ export const Primary: Story = {
     leftIcon: 'chevron_left',
     hasRightIcon: true,
     rightIcon: 'chevron_right',
-    disabled: false,
+    state: 'active',
 
   },
 };
@@ -38,7 +37,7 @@ export const Secondary: Story = {
     leftIcon: 'chevron_left',
     hasRightIcon: true,
     rightIcon: 'chevron_right',
-    disabled: false,
+    state: 'active',
   },
 };
 
@@ -51,7 +50,7 @@ export const Tertiary: Story = {
     leftIcon: 'chevron_left',
     hasRightIcon: true,
     rightIcon: 'chevron_right',
-    disabled: false,
+    state: 'active',
   },
 };
 

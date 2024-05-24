@@ -1,0 +1,15 @@
+<div class="accordion-container">
+  <div class="accordion">
+    <div *ngFor="let item of items" class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(item)">
+        {{ item.title }}
+        <span class="material-icons chevron">
+          {{ item.isOpen ? 'expand_less' : 'expand_more' }}
+        </span>
+      </button>
+      <div class="accordion-content" [style.max-height]="item.isOpen ? content.scrollHeight + 'px' : '0'" #content>
+        <p>{{ item.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>

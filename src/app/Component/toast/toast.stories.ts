@@ -4,7 +4,7 @@ import { ToastComponent } from './toast.component';
 
 const meta: Meta<ToastComponent> = {
   component: ToastComponent,
-  title: 'Toast',
+  title: 'Components/Toast',
   tags: ['autodocs'],
   args: {
     title: "This is a Toast",

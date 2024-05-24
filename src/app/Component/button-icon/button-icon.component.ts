@@ -20,8 +20,10 @@ export class ButtonIconComponent {
 
   @Input() icon: string = '';
 
+  @Input() state: "active" | "disabled" = "active";
+
   public get classes(): string[] {
-    return getStyles(this.type, this.size)
+    return getStyles(this.type, this.size, this.state)
 
   }
 }

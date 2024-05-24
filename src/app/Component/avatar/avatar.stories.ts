@@ -3,7 +3,7 @@ import { AvatarComponent } from "./avatar.component";
 
 const meta: Meta<AvatarComponent> = {
   component: AvatarComponent,
-  title: 'Avatar',
+  title: 'Components/Avatar',
   tags: ['autodocs'],
   args: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },

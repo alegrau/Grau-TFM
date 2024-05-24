@@ -3,10 +3,11 @@ import { ButtonIconComponent } from './button-icon.component';
 
 const meta: Meta<ButtonIconComponent> = {
   component: ButtonIconComponent,
-  title: 'Button',
+  title: 'Components/Button icon',
   tags: ['autodocs'],
   args: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
+    state: { control: 'select', options: ['active', 'disabled'] }
 
   }
 } as Meta;
@@ -19,5 +20,6 @@ export const iconButton: Story = {
     type: 'primary',
     icon: 'chevron_right',
     size: 'large',
+    state: 'active',
   },
 }

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.container,
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+/*Display*/
+.display-1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: 0.40px;
+  word-wrap: break-word
+}
+
+.display-2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  word-wrap: break-word
+}
+
+/*Heading*/
+.heading-1 {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.27px;
+  word-wrap: break-word
+}
+
+.heading-2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.22px;
+  word-wrap: break-word
+}
+
+.heading-3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.18px;
+  word-wrap: break-word
+}
+
+/*Body*/
+
+.body-1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.16px;
+  word-wrap: break-word
+}
+
+.body-2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.14px;
+  word-wrap: break-word
+}
+
+/*Small text*/
+.small-1 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.12px;
+  word-wrap: break-word
+}
+
+.small-2 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.11px;
+  word-wrap: break-word
+}
