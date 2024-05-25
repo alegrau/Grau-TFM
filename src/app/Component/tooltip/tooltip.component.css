@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+.tooltip-container {
+  display: flex;
+  align-items: center;
+  /* Center the items vertically */
+  justify-content: center;
+  /* Center the items horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: #D1E3FF;
+  color: #252B37;
+  text-align: left;
+  border-radius: 4px;
+  padding: 10px 12px;
+
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in-out;
+
+
+  /*text*/
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.12px;
+
+  width: max-content;
+  max-width: 350px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.tooltip-container:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-container .tooltiptext mat-icon {
+  vertical-align: middle;
+  position: absolute;
+
+}
+
+/*Positions*/
+/*Tooltip top*/
+.tooltip-container.top .tooltiptext {
+  bottom: calc(100% + 10px);
+}
+
+.tooltip-container.top .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #D1E3FF transparent transparent transparent;
+}
+
+/* Tooltip bottom */
+.tooltip-container.bottom .tooltiptext {
+  top: calc(100% + 10px);
+}
+
+.tooltip-container.bottom .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #D1E3FF transparent;
+}
+
+/* Tooltip left */
+.tooltip-container.left .tooltiptext {
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-container.left .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #D1E3FF;
+}
+
+/* Tooltip right */
+.tooltip-container.right .tooltiptext {
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-container.right .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #D1E3FF transparent transparent;
+}

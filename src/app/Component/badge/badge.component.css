@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+.badge {
+  /*Size*/
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  padding-right: 12px;
+  padding-left: 12px;
+  flex-shrink: 0;
+  border-radius: 4px;
+
+  /*text*/
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+}
+
+span {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+/*Size*/
+.large {
+  height: 32px;
+
+}
+
+.small {
+  height: 26px;
+}
+
+/*Icon*/
+.right-icon,
+.left-icon {
+  font-size: 16px;
+  align-content: center;
+}
+
+.mat-icon {
+  font-size: 16px;
+}
+
+/*Colour*/
+.blue {
+  background-color: #F5F9FF;
+  color: #0066FF;
+}
+
+.grey {
+  background-color: #EFF3FA;
+  color: #252B37;
+}
+
+.green {
+  background-color: #E6FFEE;
+  color: #007A23;
+}
+
+.orange {
+  background-color: #FFFAEB;
+  color: #DD6A02;
+}
+
+.red {
+  background-color: #FFF1F2;
+  color: #CB0717;
+}

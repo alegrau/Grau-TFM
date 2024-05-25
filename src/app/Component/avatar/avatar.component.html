@@ -1,0 +1,8 @@
+<div class="avatar" [ngClass]="classes">
+  <ng-container *ngIf="type === 'initials'; else photoAvatar">
+    <span class="initials">{{ initials }}</span>
+  </ng-container>
+  <ng-template #photoAvatar>
+    <img [src]="photoUrl" [alt]="altText">
+  </ng-template>
+</div>

@@ -1,0 +1,5 @@
+<button [ngClass]="classes">
+  <mat-icon *ngIf="hasLeftIcon" class="left-icon">{{ leftIcon }}</mat-icon>
+  <span>{{ label }}</span>
+  <mat-icon *ngIf="hasRightIcon" class="right-icon">{{ rightIcon }}</mat-icon>
+</button>

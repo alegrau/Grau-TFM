@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="size">
+    <div *ngFor="let item of scale" class="item">
+      <div [ngClass]="item.class" class="square">
+      </div>
+      <span>{{item.label}}</span>
+    </div>
+  </div>
+
+
+  <div class="icon">
+    <mat-icon *ngFor="let item of scale" [ngClass]="item.class">account_circle</mat-icon>
+  </div>
+</div>

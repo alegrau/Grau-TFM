@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-input.error {
+  border: 1px solid red;
+}
+
+.radio-label {
+  line-height: 100%;
+  color: #252B37;
+}
+
+.radio-input:disabled+.radio-label {
+  color: #DBE2F0;
+  cursor: not-allowed;
+}

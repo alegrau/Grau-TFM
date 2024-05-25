@@ -1,0 +1,117 @@
+@import '~material-icons/iconfont/material-icons.css';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  cursor: pointer;
+
+}
+
+.mat-icon {
+  align-content: center;
+  font-size: 24px;
+}
+
+/*Type*/
+.primary {
+  color: #FFFFFF;
+  background-color: #0041A3;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.primary:hover {
+  background-color: #0066FF;
+}
+
+.primary:focus {
+  background-color: #070D56;
+}
+
+.primary:active {
+  background-color: #0041A3;
+}
+
+.primary.disabled {
+  background-color: #EFF3FA;
+  color: #95A2BD;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background-color: white;
+  color: #0066FF;
+  border: 1px solid #0066FF;
+}
+
+.secondary:hover {
+  background-color: #F5F9FF;
+  color: #0066FF;
+}
+
+.secondary:focus {
+  background-color: #D1E3FF;
+  color: #0066FF;
+}
+
+.secondary:active {
+  background-color: white;
+  color: #0066FF;
+}
+
+.secondary.disabled {
+  border: 1px solid #DBE2F0;
+  color: #DBE2F0;
+  cursor: not-allowed;
+  background-color: #FFFFFF;
+}
+
+.tertiary {
+  background-color: white;
+  color: #0041A3;
+  border: none;
+}
+
+.tertiary:hover {
+  background-color: white;
+  color: #0066FF;
+}
+
+.tertiary:focus {
+  background-color: white;
+  color: #070D56;
+}
+
+.tertiary:active {
+  background-color: white;
+  color: #0041A3;
+}
+
+.tertiary.disabled {
+  background-color: white;
+  color: #DBE2F0;
+  cursor: not-allowed;
+}
+
+/*Sizes*/
+.large {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+.medium {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.small {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+/**/
