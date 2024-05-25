@@ -7,7 +7,7 @@
 
 .alert-box {
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 24px;
   /*transform: translateX(24px);*/
   display: inline-flex;
