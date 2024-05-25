@@ -66,20 +66,20 @@ i.material-icons {
   flex-direction: column;
   padding: 8px;
   gap: 12px;
-  width: 250px;
+  width: 200px;
 }
 
 .vertical span {
   word-wrap: break-word;
 }
 
-.image.vertical {
+.vertical .image {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  object-fit: cover;
   width: 100%;
-  align-self: stretch;
+  height: 120px;
 }
 
 

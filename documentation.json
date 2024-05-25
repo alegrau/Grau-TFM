@@ -1072,7 +1072,7 @@
                     }
                 }
             },
-            "templateData": "<div [ngClass]=\"classes\" [class.disabled]=\"disabled\">\n  <div class=\"image\">\n    <i class=\"material-icons\">\n      hide_image\n    </i>\n  </div>\n  <div class=\"info\">\n    <span class=\"title\">{{title}}</span>\n    <span class=\"description\">{{description}}</span>\n  </div>\n</div>"
+            "templateData": "<div [ngClass]=\"classes\" [class.disabled]=\"disabled\">\n  <!--Replace this with a img-->\n  <div class=\"image\">\n    <i class=\"material-icons\">\n      hide_image\n    </i>\n  </div>\n  <div class=\"info\">\n    <span class=\"title\">{{title}}</span>\n    <span class=\"description\">{{description}}</span>\n  </div>\n</div>"
         },
         {
             "name": "CheckboxComponent",
@@ -2480,6 +2480,16 @@
                 "name": "getStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/Component/alert-box/alert-box.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
+            },
+            {
+                "name": "getStyles",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/Component/avatar/avatar.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2495,16 +2505,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(...args: string[]) => [\"badge\", ...args].filter(Boolean)"
-            },
-            {
-                "name": "getStyles",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/Component/alert-box/alert-box.component.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
             },
             {
                 "name": "getStyles",
@@ -2633,6 +2633,18 @@
                     "defaultValue": "{\n  providers: [provideRouter(routes), provideAnimationsAsync()]\n}"
                 }
             ],
+            "src/app/Component/alert-box/alert-box.component.ts": [
+                {
+                    "name": "getStyles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/Component/alert-box/alert-box.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
+                }
+            ],
             "src/app/Component/avatar/avatar.component.ts": [
                 {
                     "name": "getStyles",
@@ -2655,18 +2667,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(...args: string[]) => [\"badge\", ...args].filter(Boolean)"
-                }
-            ],
-            "src/app/Component/alert-box/alert-box.component.ts": [
-                {
-                    "name": "getStyles",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/Component/alert-box/alert-box.component.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
                 }
             ],
             "src/app/Component/breadcrumb/breadcrumb.component.ts": [
