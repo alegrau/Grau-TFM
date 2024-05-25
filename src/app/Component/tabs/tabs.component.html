@@ -1,0 +1,7 @@
+<!-- tabs.component.html -->
+
+<div class="tabs">
+  <div *ngFor="let tab of tabs" [class.selected]="tab.selected" [class.disabled]="tab.disabled" (click)="tabClick(tab)">
+    {{ tab.label }}
+  </div>
+</div>

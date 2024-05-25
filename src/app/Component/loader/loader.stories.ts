@@ -13,6 +13,6 @@ type Story = StoryObj<LoaderComponent>;
 
 export const Loader: Story = {
   args: {
-
+    small: false,
   }
 }

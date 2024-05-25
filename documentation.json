@@ -1366,6 +1366,91 @@
             "templateData": "<div class=\"body\">\n  <h1>Colour</h1>\n  <div *ngFor=\"let palette of palette\" class=\"palete\">\n    <h2>{{palette.title}}</h2>\n    <div class=\"row-colour\">\n      <div *ngFor=\"let colour of palette.colour\" class=\"colour-info\">\n        <div [ngClass]=\"[colour.class]\" class=\"circle\"></div>\n        <p class=\"title\"> <strong>{{colour.name }}</strong> <br>\n          {{colour.hex}}</p>\n      </div>\n    </div>\n  </div>\n</div>"
         },
         {
+            "name": "DropdownComponent",
+            "id": "component-DropdownComponent-69d21b5ce1c663c7f14d51681e499170150991cadd9eb8bde5f54d1e61a2ded48937b2549d00b69b78c6f3ab50b9ae81f1f5023ba2f67333bda08061a6039282",
+            "file": "src/app/Component/dropdown/dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dropdown",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./dropdown.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "helpText",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "selectedValue",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { FormsModule } from '@angular/forms';\n\n@Component({\n  selector: 'app-dropdown',\n  standalone: true,\n  imports: [CommonModule, FormsModule],\n  templateUrl: './dropdown.component.html',\n  styleUrl: './dropdown.component.css'\n})\nexport class DropdownComponent {\n  @Input() label: string = '';\n  @Input() options: { label: string, value: any }[] = [];\n  @Input() helpText: string = '';\n\n\n  selectedValue: any;\n}\n",
+            "styleUrl": "./dropdown.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"dropdown\">\n  <label>{{ label }}</label>\n  <select [(ngModel)]=\"selectedValue\">\n    <option *ngFor=\"let option of options\" [value]=\"option.value\">{{ option.label }}</option>\n  </select>\n  <span class=\"help-text\">{{ helpText }}</span>\n  <i class=\"material-icons chevron\">expand_more</i>\n</div>"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-cad94b233ec8e80ceb541e7972c5f9737e08237b4e137112f3987ca48ee0cce5c0d57798d41daa5d4d24d6bdbb2df1606ab68cca2aa0a1785e38f99f3cac0729",
             "file": "src/stories/header.component.ts",
@@ -1453,7 +1538,7 @@
         },
         {
             "name": "LoaderComponent",
-            "id": "component-LoaderComponent-f8b5923f5cb2f8654aabe9acb2b1c89f10b1d8c308517443b6ec53aa48de1bbb987cbe35d39ecc29144873ae721873a12025d99612cb407fcd287b906bd1af8c",
+            "id": "component-LoaderComponent-d78cc6826a5868e9bb58b2ca7a311ae019a4129c15c8b9d3b6b36d31895c2cbf23c2c141f5a9d52c8dc264cbecd2068c8296400b81d491c7fa223252cb3f2c83",
             "file": "src/app/Component/loader/loader.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1468,7 +1553,17 @@
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "small",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -1477,17 +1572,22 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-loader',\n  standalone: true,\n  imports: [],\n  templateUrl: './loader.component.html',\n  styleUrl: './loader.component.css'\n})\nexport class LoaderComponent {\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-loader',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './loader.component.html',\n  styleUrl: './loader.component.css'\n})\nexport class LoaderComponent {\n  @Input() small: boolean = false;\n\n}\n",
             "styleUrl": "./loader.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"loader\"> </div>"
+            "templateData": "<div class=\"loader\" [ngClass]=\"{ 'loader': true, 'small': small }\"> </div>"
         },
         {
             "name": "PageComponent",
@@ -1581,6 +1681,135 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "PaginationComponent",
+            "id": "component-PaginationComponent-5d33fbda9b51ff963018aa247ef0f40facdff85ceebb2f13a975d0829273b74616ca68f1919f5c4c3e3e892ca7f18a0a6eb1bb6cd6e543538e66924ad9d4dd27",
+            "file": "src/app/Component/pagination/pagination.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-pagination",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./pagination.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "isActive",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "pageNumber",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'page'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "\"page\" | \"arrow\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "pageClicked",
+                    "defaultValue": "new EventEmitter<number>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter<number>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-pagination',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './pagination.component.html',\n  styleUrl: './pagination.component.css'\n})\nexport class PaginationComponent {\n\n  @Input() type: 'page' | 'arrow' = 'page';\n  @Input() pageNumber: number = 1;\n  @Input() isActive: boolean = true;\n  @Output() pageClicked: EventEmitter<number> = new EventEmitter<number>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  onClick() {\n    if (this.type === 'page') {\n      this.pageClicked.emit(this.pageNumber);\n    }\n  }\n\n  get isPage(): boolean {\n    return this.type === 'page';\n  }\n\n  get isArrow(): boolean {\n    return this.type === 'arrow';\n  }\n}\n\n",
+            "styleUrl": "./pagination.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "extends": [],
+            "accessors": {
+                "isPage": {
+                    "name": "isPage",
+                    "getSignature": {
+                        "name": "isPage",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 29
+                    }
+                },
+                "isArrow": {
+                    "name": "isArrow",
+                    "getSignature": {
+                        "name": "isArrow",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 33
+                    }
+                }
+            },
+            "templateData": "<p>pagination works!</p>\n"
         },
         {
             "name": "RadioButtonComponent",
@@ -1759,6 +1988,88 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<div class=\"container\">\n  <div class=\"size\">\n    <div *ngFor=\"let item of scale\" class=\"item\">\n      <div [ngClass]=\"item.class\" class=\"square\">\n      </div>\n      <span>{{item.label}}</span>\n    </div>\n  </div>\n\n\n  <div class=\"icon\">\n    <mat-icon *ngFor=\"let item of scale\" [ngClass]=\"item.class\">account_circle</mat-icon>\n  </div>\n</div>"
+        },
+        {
+            "name": "TabsComponent",
+            "id": "component-TabsComponent-b0e341a7d371782feb9711fa1431fb88636e06ce5ca84f44455a9671f81ef7c91f04e9b9898e7ca0c443e1151da6b7a1c379e1c8dac1b2e509ce1e9fe4f7bc27",
+            "file": "src/app/Component/tabs/tabs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-tabs",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./tabs.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "tabs",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "tabClick",
+                    "args": [
+                        {
+                            "name": "tab",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "tab",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-tabs',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './tabs.component.html',\n  styleUrl: './tabs.component.css'\n})\nexport class TabsComponent {\n  @Input() tabs: { label: string, selected?: boolean, disabled?: boolean }[] = [];\n\n  tabClick(tab: any) {\n    if (!tab.disabled) {\n      this.tabs.forEach(t => t.selected = false);\n      tab.selected = true;\n    }\n  }\n\n}\n",
+            "styleUrl": "./tabs.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- tabs.component.html -->\n\n<div class=\"tabs\">\n  <div *ngFor=\"let tab of tabs\" [class.selected]=\"tab.selected\" [class.disabled]=\"tab.disabled\" (click)=\"tabClick(tab)\">\n    {{ tab.label }}\n  </div>\n</div>"
         },
         {
             "name": "TextAreaComponent",
@@ -2857,7 +3168,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 2,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -3050,12 +3361,30 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/Component/dropdown/dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropdownComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/Component/loader/loader.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "LoaderComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/Component/pagination/pagination.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PaginationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -3075,6 +3404,15 @@
                 "name": "getStyles",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/Component/tabs/tabs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TabsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
