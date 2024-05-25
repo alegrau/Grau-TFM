@@ -1,7 +1,0 @@
-<div class="container">
-    <label *ngIf="hasLabel" for="">{{label}}</label>
-    <div class="subcontainer">
-        <input [ngClass]="classes" type="email" placeholder="{{placeholder}}" [disabled]="disabled" (invalid)="invalid">
-        <p *ngIf="hasHelpText" class="help-text">{{helpText}}</p>
-    </div>
-</div>
