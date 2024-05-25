@@ -7,7 +7,7 @@ const meta: Meta<ButtonComponent> = {
   tags: ['autodocs'],
   args: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
-    state: { control: 'select', options: ['active', 'disabled'] }
+    state: { control: 'select', options: ['active', 'disabled'] },
   }
 } as Meta;
 

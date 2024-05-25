@@ -27,7 +27,6 @@ export class ButtonComponent {
   @Input() hasRightIcon: boolean = true;
   @Input() leftIcon: string = '';
   @Input() rightIcon: string = '';
-
   @Input() state: "active" | "disabled" = "active";
 
   public get classes(): string[] {

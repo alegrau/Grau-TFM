@@ -2490,6 +2490,16 @@
                 "name": "getStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/Component/alert-box/alert-box.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
+            },
+            {
+                "name": "getStyles",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/Component/avatar/avatar.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2631,6 +2641,18 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\r\n  providers: [provideRouter(routes), provideAnimationsAsync()]\r\n}"
+                }
+            ],
+            "src/app/Component/alert-box/alert-box.component.ts": [
+                {
+                    "name": "getStyles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/Component/alert-box/alert-box.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(...args: string[]) => [\"alert-box\", ...args].filter(Boolean)"
                 }
             ],
             "src/app/Component/alert-box/alert-box.component.ts": [
