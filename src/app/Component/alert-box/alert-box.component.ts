@@ -20,7 +20,7 @@ export class AlertBoxComponent {
 
   isVisible: boolean = true;
 
-  @Output() close = new EventEmitter<void>(); // 
+  @Output() close = new EventEmitter<void>();
 
   onClose() {
     this.isVisible = false;

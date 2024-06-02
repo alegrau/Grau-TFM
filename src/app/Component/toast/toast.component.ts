@@ -1,13 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 
 const getStyles = (...args: string[]) => ["badge", ...args].filter(Boolean)
 
 @Component({
   selector: 'app-toast',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIcon],
   templateUrl: './toast.component.html',
   styleUrl: './toast.component.css'
 })
@@ -18,9 +18,12 @@ export class ToastComponent {
   @Input() title: string = '';
   @Input() message: string = '';
 
-  @Output() close = new EventEmitter<void>(); // Output event for close button
+  isVisible: boolean = true;
+
+  @Output() close = new EventEmitter<void>();
 
   onClose() {
+    this.isVisible = false;
     this.close.emit();
   }
 

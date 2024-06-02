@@ -23,23 +23,25 @@
 
 img {
   border-radius: 50%;
-  object-fit: fill;
 }
 
 /*Size*/
-.large {
+.large,
+.large img {
   width: 48px;
   height: 48px;
   font-size: 18px;
 }
 
-.medium {
+.medium,
+.medium img {
   width: 36px;
   height: 36px;
   font-size: 14px;
 }
 
-.small {
+.small,
+.small img {
   width: 24px;
   height: 24px;
   font-size: 12px;
