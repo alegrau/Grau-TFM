@@ -1,13 +1,11 @@
 <div class="tab-bar">
-  <div *ngFor="let tab of tabs; let i = index" class="tab"
-    [ngClass]="{ selected: selectedIndex === i, default: selectedIndex !== i && !tab.disabled, disabled: tab.disabled }"
-    (click)="showTabContent(i)">
-    {{ tab.label }}
-  </div>
+  <div class="tab" [class.selected]="activeTab === 0" (click)="showTabContent(0)">Label tab</div>
+  <div class="tab" [class.default]="activeTab !== 1" [class.selected]="activeTab === 1" (click)="showTabContent(1)">
+    Label tab</div>
+  <div class="tab disabled" (click)="showTabContent(2)">Label tab</div>
 </div>
 
 <div class="tab-content">
-  <div *ngFor="let tab of tabs; let i = index" class="tab-panel" [ngClass]="{ active: selectedIndex === i }">
-    {{ tab.content }}
-  </div>
+  <div class="tab-panel" [class.active]="activeTab === 0">Contenido del Tab 1</div>
+  <div class="tab-panel" [class.active]="activeTab === 1">Contenido del Tab 2</div>
 </div>
