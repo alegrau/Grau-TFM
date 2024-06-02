@@ -1,0 +1,12 @@
+<div class="dropdown">
+  <label *ngIf="hasLabel">{{ label }}</label>
+  <div class="subcontainer">
+    <div class="select" [ngClass]="{'invalid': isInvalid}" (click)="toggleDropdown()"> <span>{{ selectedOption }}</span>
+      <i class="material-icons">expand_more</i>
+    </div>
+    <ul class="list" [class.show]="dropdownOpen">
+      <li *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</li>
+    </ul>
+  </div>
+  <span class="help-text" *ngIf="hasHelpText">{{ helpText }}</span>
+</div>

@@ -1,21 +1,54 @@
-/* Estilo de los botones de las pestañas */
-.tablink {
-  background-color: #f0f0f0;
-  border: none;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  display: inline-flex;
+  height: 48px;
+  min-width: 136px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  border-bottom: 3px solid #0066FF;
+  color: #0066FF;
+  font-weight: 700;
+}
+
+.default {
+  border-bottom: 3px solid #616C84;
+  color: #616C84;
   cursor: pointer;
-  padding: 10px 20px;
 }
 
-.tablink:hover {
-  background-color: #ddd;
+.disabled {
+  border-bottom: 3px solid #EFF3FA;
+  color: #EFF3FA;
+  cursor: not-allowed;
 }
 
-/* Ocultar todo el contenido de las pestañas por defecto */
-.tabcontent {
+.default:hover {
+  background: #F5F9FF;
+}
+
+.tab-content {
+  padding: 16px;
+  color: #252B37;
+}
+
+.tab-panel {
   display: none;
 }
 
-/* Mostrar el contenido de la pestaña activa */
-.active {
+.tab-panel.active {
   display: block;
 }

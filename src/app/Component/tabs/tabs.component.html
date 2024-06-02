@@ -1,7 +1,13 @@
-<!-- tabs.component.html -->
-
-<div class="tabs">
-  <div *ngFor="let tab of tabs" [class.selected]="tab.selected" [class.disabled]="tab.disabled" (click)="tabClick(tab)">
+<div class="tab-bar">
+  <div *ngFor="let tab of tabs; let i = index" class="tab"
+    [ngClass]="{ selected: selectedIndex === i, default: selectedIndex !== i && !tab.disabled, disabled: tab.disabled }"
+    (click)="showTabContent(i)">
     {{ tab.label }}
+  </div>
+</div>
+
+<div class="tab-content">
+  <div *ngFor="let tab of tabs; let i = index" class="tab-panel" [ngClass]="{ active: selectedIndex === i }">
+    {{ tab.content }}
   </div>
 </div>
