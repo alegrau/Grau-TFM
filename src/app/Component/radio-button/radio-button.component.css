@@ -1,28 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import '~material-icons/iconfont/material-icons.css';
 
-.container {
+div {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-direction: row;
 }
 
 .radio-container {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 24px;
+  /* align-items: center; */
+
 }
 
-.radio-input.error {
-  border: 1px solid red;
+input {
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #009FD4;
+  transition: 0.2s ease-in-out;
+  margin: 0;
+  margin-right: 8px;
+  position: relative;
+
 }
 
-.radio-label {
-  line-height: 100%;
+input:checked {
+  border: 4px solid #009FD4;
+}
+
+label {
+  cursor: pointer;
   color: #252B37;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.radio-input:disabled+.radio-label {
-  color: #DBE2F0;
+input.disabled {
+  background-color: #EFF3FA;
+  border-color: #DBE2F0;
   cursor: not-allowed;
+}
+
+input[type="radio"]:disabled+label {
+  cursor: not-allowed;
+  color: #DBE2F0;
+}
+
+input[type="radio"].invalid {
+  border: 1px solid #CB0717;
+}
+
+input[type="radio"].invalid:checked {
+  border: 4px solid #CB0717;
 }

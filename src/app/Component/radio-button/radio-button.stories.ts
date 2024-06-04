@@ -16,8 +16,10 @@ type Story = StoryObj<RadioButtonComponent>;
 
 export const Radiobutton: Story = {
   args: {
-    label: 'Radio button',
-    isDisabled: false,
-    hasError: false,
+    options: [
+      { label: 'Option 1', checked: false, state: 'valid' },
+      { label: 'Option 2', checked: false, state: 'invalid' },
+      { label: 'Option 3', checked: false, state: 'disabled' }
+    ]
   }
 }

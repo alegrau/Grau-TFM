@@ -1,72 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import '~material-icons/iconfont/material-icons.css';
 
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .checkbox {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
+  display: none;
+}
 
-  /*label*/
+.checkbox-label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+
   color: #252B37;
-  font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  letter-spacing: 0.14px;
+  letter-spacing: 0.16px;
 }
 
-input {
-  width: 16px;
-  height: 16px;
-
-  border-radius: 2px;
-  border: 1px solid #009FD4;
-  background-color: #ffffff;
+.checkbox-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #009FD4;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Material Icons';
+  font-size: 18px;
+  color: transparent;
 }
 
-input.unselected {
-  background-color: white;
-}
-
-input:checked {
+.checkbox:checked+.checkbox-label::before {
   background-color: #009FD4;
+  border-color: #009FD4;
+  color: #fff;
 }
 
-input:not(:checked) {
-  background-color: #ffffff;
+.checkbox:checked+.checkbox-label::before {
+  content: 'check';
 }
 
-input:hover {
-  background-color: #0041A3;
-}
 
-input:indeterminate {
-  background-color: #009FD4;
-}
+.checkbox-label:hover::before {
 
-input.disabled {
-  border: 1px solid #DBE2F0;
-  background-color: #EFF3FA;
-  cursor: not-allowed;
-
-}
-
-span:disabled {
-  color: #DBE2F0;
-}
-
-input.focus {
-  border-radius: 2px;
-  border: 1px solid #009FD4;
-
-  /* Input Active */
   box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
 }
 
-input:invalid {
-  border-color: red;
-  background-color: pink;
+.checkbox:focus+.checkbox-label::before {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.checkbox-container.invalid .checkbox:checked+.checkbox-label::before {
+  background-color: #FFF1F2;
+  border-color: #F01224;
+  color: #F01224;
+}
+
+
+.checkbox-container.disabled .checkbox:disabled+.checkbox-label::before {
+  background-color: #EFF3FA;
+  border-color: #DBE2F0;
+  color: #DBE2F0;
+  box-shadow: none;
+}
+
+.checkbox-container.disabled .checkbox:disabled+.checkbox-label {
+  color: #DBE2F0;
+  cursor: not-allowed;
 }
