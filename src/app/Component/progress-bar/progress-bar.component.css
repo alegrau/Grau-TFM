@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 12px;
 
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .subcontainer {
