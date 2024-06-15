@@ -1,0 +1,54 @@
+<div class="container">
+  <label>Label</label>
+  <div class="subcontainer" id="upload-container">
+    <div class="upload-box" id="upload-box" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)"
+      (drop)="onDrop($event)">
+      <div class="info">
+        <i class="material-icons icon">image</i>
+        <span>Arrastra tu imagen o da click aquí para buscarla</span>
+        <span>Solo PNG, JPG (máx 2MB)</span>
+      </div>
+      <button class="button button-sm" (click)="fileInput.click()">
+        <i class="material-icons icon">search</i> Buscar
+      </button>
+    </div>
+    <span class="help-text">Help text</span>
+  </div>
+  <input type="file" #fileInput style="display: none;" (change)="onFileSelected($event)" multiple>
+
+  <ng-container *ngFor="let file of files">
+    <div class="uploading" *ngIf="file.progress < 100">
+      <div class="status">
+        <i class="material-icons icon">description</i>
+        <div class="progress-status">
+          <div class="file">
+            <span class="file-name">{{ file.name }}</span>
+            <span class="file-size">{{ (file.size / 1024 / 1024).toFixed(2) }}MB</span>
+          </div>
+          <div class="bar">
+            <div class="progress-bar">
+              <div class="progress" [style.width.%]="file.progress"></div>
+            </div>
+            <div class="progress-label">{{ file.progress }}%</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-close" (click)="removeFile(file)">
+        <i class="material-icons icon">close</i>
+      </button>
+    </div>
+
+    <div class="uploaded" *ngIf="file.progress >= 100">
+      <div class="status">
+        <i class="material-icons icon file">description</i>
+        <div class="file">
+          <span class="file-name">{{ file.name }}</span>
+          <span class="file-size">{{ (file.size / 1024 / 1024).toFixed(2) }}MB</span>
+        </div>
+      </div>
+      <button class="btn-close" (click)="removeFile(file)">
+        <i class="material-icons icon close">close</i>
+      </button>
+    </div>
+  </ng-container>
+</div>

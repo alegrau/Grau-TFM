@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:host {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.completed,
+.active,
+.inactive {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #0066FF;
+
+}
+
+.circle div {
+  display: inline-block;
+}
+
+span {
+  font-size: 14px;
+  color: #252B37;
+  word-wrap: none;
+  word-break: none;
+}
+
+/* Estado */
+.circle-completed {
+  background-color: #0066FF;
+}
+
+.circle-active {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #0066FF;
+}
+
+.circle-inactive {
+  border-color: #DBE2F0;
+}
+
+/* Barra de progreso */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #EFF3FA;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #0066FF;
+  border-radius: 10px;
+}
