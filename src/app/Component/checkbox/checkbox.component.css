@@ -14,6 +14,7 @@
 .checkbox-label {
   position: relative;
   padding-left: 30px;
+  padding-top: 2px;
   cursor: pointer;
   user-select: none;
 

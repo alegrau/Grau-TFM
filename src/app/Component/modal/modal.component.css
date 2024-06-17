@@ -5,6 +5,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.main {
+  height: 60vh;
+}
+
 /*Button*/
 .open-modal-btn,
 .btn {
@@ -38,14 +42,14 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 60vh;
   background-color: rgba(37, 43, 55, 0.8);
   overflow: auto;
 }
 
 .modal-content {
   background-color: #ffffff;
-  margin: 20% auto;
+  margin: 10% auto;
   padding: 24px;
   max-width: 500px;
   position: relative;
@@ -63,6 +67,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+
+  font-family: 'Open Sans', sans-serif;
 }
 
 .material-icons {
@@ -89,14 +95,15 @@ body {
 }
 
 
-.modal.btns {
+.modal-btns {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 16px;
 }
 
 .modal-btn {
   width: 180px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .modal-btn.cancel-btn {
@@ -108,7 +115,6 @@ body {
 .modal-btn.cancel-btn:hover {
   background-color: #F5F9FF;
 }
-
 
 .close-modal-btn {
   background-color: transparent;

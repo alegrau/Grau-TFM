@@ -1,7 +1,4 @@
-<div class="radio-container">
-  <div *ngFor="let option of options">
-    <input type="radio" [id]="option.label" [checked]="option.checked" [disabled]="option.state === 'disabled'"
-      [ngClass]="getClasses(option.state)" />
-    <label [for]="option.label">{{ option.label }}</label>
-  </div>
+<div class="radio-container" [ngClass]="{ 'disabled': isDisabled, 'invalid': isInvalid }">
+  <input type="radio" [disabled]="isDisabled" [ngClass]="{ 'invalid': isInvalid }">
+  <label>{{ label }}</label>
 </div>

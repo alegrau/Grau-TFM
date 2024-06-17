@@ -13,26 +13,13 @@ const getStyles = (...args: string[]) => ["radio-button", ...args].filter(Boolea
 })
 export class RadioButtonComponent {
 
-  @Input() options: { label: string; checked: boolean; state: 'valid' | 'invalid' | 'disabled' }[] = [];
+  @Input() label: string = '';
+  @Input() isInvalid: boolean = false;
+  @Input() isDisabled: boolean = false;
 
-  public getClasses(state: 'valid' | 'invalid' | 'disabled'): string {
-    switch (state) {
-      case 'invalid':
-        return 'invalid';
-      case 'disabled':
-        return 'disabled';
-      default:
-        return 'valid';
-    }
+  public get classes(): string[] {
+    return getStyles()
   }
 
-  // @Input() label: string = '';
-
-  // @Input() checked: boolean = false;
-
-  //@Input() state: 'valid' | 'invalid' | 'disabled' = 'valid';
-
-  //public get classes(): string[] {
-  //return getStyles()
 
 }

@@ -1,46 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import '~material-icons/iconfont/material-icons.css';
 
-div {
-  display: flex;
-  flex-direction: row;
-}
-
 .radio-container {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  /* align-items: center; */
-
+  flex-direction: row;
+  align-items: center;
 }
 
-input {
+input[type="radio"] {
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 50%;
   width: 16px;
   height: 16px;
   border: 1px solid #009FD4;
-  transition: 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
   margin: 0;
   margin-right: 8px;
   position: relative;
-
 }
 
-input:checked {
+input[type="radio"]:checked {
   border: 4px solid #009FD4;
 }
 
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 3px #009FD4;
+  /* Ejemplo de estilo para el foco */
+}
+
 label {
-  cursor: pointer;
   color: #252B37;
   font-family: 'Open Sans', sans-serif;
 }
 
-input.disabled {
-  background-color: #EFF3FA;
-  border-color: #DBE2F0;
+input[type="radio"]:disabled {
   cursor: not-allowed;
+  background-color: #EFF3FA;
+  border: 4px solid #DBE2F0;
 }
 
 input[type="radio"]:disabled+label {
@@ -54,4 +53,8 @@ input[type="radio"].invalid {
 
 input[type="radio"].invalid:checked {
   border: 4px solid #CB0717;
+}
+
+input[type="radio"].invalid:focus {
+  box-shadow: 0px 0px 4px 2px rgba(240, 18, 36, 0.20);
 }

@@ -22,15 +22,11 @@ export class TextAreaComponent {
   @Input() hasHelpText: boolean = true;
   @Input() helpText: string = '';
   @Input() disabled: boolean = false;
-  @Input() error: boolean = false;
+  @Input() invalid: boolean = false;
 
   @Input() maxLength: number = 100;
   @Input() currentLength: number = 0;
 
-  onInput(event: Event): void {
-    const input = event.target as HTMLTextAreaElement;
-    this.currentLength = input.value.length;
-  }
 
   public get classes(): string[] {
     return getStyles()

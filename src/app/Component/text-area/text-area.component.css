@@ -97,11 +97,11 @@ textarea:disabled~.subcontainer p {
   color: #95A2BD;
 }
 
-textarea:invalid {
+textarea.invalid {
   border-color: #CB0717;
   box-shadow: 0 0 5px #E56671;
 }
 
-textarea:invalid~.subcontainer p {
+textarea.invalid~.subcontainer p {
   color: #CB0717;
 }

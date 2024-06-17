@@ -1,7 +1,7 @@
-<div class="chip">
-  <i *ngIf="hasIcon" [class.disabled]="disabled" class="material-icons icon">{{ icon }}</i>
+<div class="chip" [ngClass]="classes" (click)="toggleSelection()">
+  <i *ngIf="hasIcon" class="material-icons icon">{{ icon }}</i>
   <span>{{ label }}</span>
-  <button *ngIf="hasButton" [disabled]="disabled">
+  <button *ngIf="hasButton && !isDisabled" (click)="removeChip($event)">
     <i class="material-icons icon">{{ iconButton }}</i>
   </button>
 </div>

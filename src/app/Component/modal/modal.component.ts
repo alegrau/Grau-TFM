@@ -9,13 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
-  modalOpen = false;
+  displayModal: boolean = false;
 
   openModal() {
-    this.modalOpen = true;
+    this.displayModal = true;
   }
 
-  closeModal() {
-    this.modalOpen = false;
+  closeModal(event: Event) {
+    this.displayModal = false;
+    event.stopPropagation();
   }
 }
