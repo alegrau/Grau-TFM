@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dropdown.component.css'
 })
 export class DropdownComponent {
+
   dropdownOpen = false;
   selectedOption = 'Select an option';
   options = ['Option 1', 'Option 2', 'Option 3'];

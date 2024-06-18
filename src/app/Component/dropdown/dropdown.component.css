@@ -126,3 +126,12 @@ label {
 .list li:hover {
   background-color: #F5F9FF;
 }
+
+/*Size*/
+.large {
+  height: 48px;
+}
+
+.small {
+  height: 40px;
+}

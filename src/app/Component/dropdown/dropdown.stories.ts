@@ -6,7 +6,7 @@ const meta: Meta<DropdownComponent> = {
   title: 'Components/Dropdown',
   tags: ['autodocs'],
   args: {
-
+    size: { control: 'select', options: ['large', 'small'] },
   }
 } as Meta;
 
@@ -15,6 +15,7 @@ type Story = StoryObj<DropdownComponent>
 
 export const Dropdown: Story = {
   args: {
+
     hasLabel: true,
     label: 'Label',
     hasHelpText: true,
