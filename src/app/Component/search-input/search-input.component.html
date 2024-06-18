@@ -1,0 +1,8 @@
+<div class="search-container">
+  <label for="search-input" class="search-label">
+    <i class="material-icons">search</i>
+  </label>
+  <input type="text" id="search-input" placeholder="Buscar" class="search-input" [(ngModel)]="searchText"
+    (input)="onInput()">
+  <button id="clear-button" class="clear-button" (click)="clearSearch()">×</button>
+</div>

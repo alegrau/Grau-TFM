@@ -7,6 +7,7 @@ const meta: Meta<ChipsComponent> = {
   tags: ['autodocs'],
   args: {
     label: "Chips",
+    size: { control: 'select', options: ['large', 'small'] },
   }
 } as Meta;
 
@@ -15,11 +16,12 @@ type Story = StoryObj<ChipsComponent>;
 
 export const Chips: Story = {
   args: {
+    size: 'large',
     hasIcon: true,
     icon: 'thumb_up_alt',
-    label: 'chips',
+    label: 'Chip label',
     hasButton: true,
     iconButton: 'cancel',
-    disabled: false,
+    isDisabled: false,
   }
 }

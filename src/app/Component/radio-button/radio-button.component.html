@@ -1,13 +1,4 @@
-<div class="container">
-  <div class="radio-container">
-    <input type="radio" id="radio" name="radios" class="radio-input" [ngClass]="{ 'error': hasError }"
-      (change)="onRadioChange($event)">
-    <label for="radio" class="radio-label">{{label}}</label>
-  </div>
-
-  <div class="radio-container">
-    <input type="radio" id="radio" name="radios" class="radio-input" [disabled]="isDisabled"
-      [ngClass]="{ 'error': hasError }" (change)="onRadioChange($event)" dis>
-    <label for="radio" class="radio-label">{{label}}</label>
-  </div>
+<div class="radio-container" [ngClass]="{ 'disabled': isDisabled, 'invalid': isInvalid }">
+  <input type="radio" [disabled]="isDisabled" [ngClass]="{ 'invalid': isInvalid }">
+  <label>{{ label }}</label>
 </div>

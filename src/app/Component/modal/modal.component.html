@@ -1,0 +1,22 @@
+<div class="main">
+  <button class="btn open-modal-btn" (click)="openModal()">
+    Abrir Modal
+  </button>
+
+  <div id="myModal" class="modal" [ngStyle]="{'display': displayModal ? 'block' : 'none'}" (click)="closeModal($event)">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-modal-btn close" (click)="closeModal($event)">
+        <i class="material-icons close-icon">close</i>
+      </button>
+      <div class="modal-info">
+        <i class="material-icons icon">info</i>
+        <h2>Título del Modal</h2>
+        <p>Este es el contenido del modal. Puedes agregar cualquier texto o contenido aquí.</p>
+      </div>
+      <div class="modal-btns">
+        <button class="btn modal-btn cancel-btn close" (click)="closeModal($event)">Cerrar</button>
+        <button class="btn modal-btn close" (click)="closeModal($event)">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

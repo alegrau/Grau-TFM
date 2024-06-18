@@ -13,14 +13,34 @@ const getStyles = (...args: string[]) => ["chips", ...args].filter(Boolean)
 })
 export class ChipsComponent {
 
+  @Input()
+  size: "large" | "small" = "large";
   @Input() hasIcon: boolean = false;
   @Input() icon: string = '';
   @Input() label: string = '';
   @Input() hasButton: boolean = false;
   @Input() iconButton: string = '';
-  @Input() disabled: boolean = false;
+  @Input() isDisabled: boolean = false;
 
-  public get classes(): string[] {
-    return getStyles()
+  isSelected = false;
+
+  toggleSelection() {
+    if (!this.isDisabled) {
+      this.isSelected = !this.isSelected;
+    }
+  }
+
+  removeChip(event: MouseEvent) {
+    event.stopPropagation();
+    this.resetState();
+  }
+
+  resetState() {
+    this.isSelected = false;
+    this.isDisabled = false;
+  }
+
+  public get classes(): string {
+    return getStyles(this.size, this.isSelected ? 'selected' : '', this.isDisabled ? 'disabled' : '').join(' ');
   }
 }

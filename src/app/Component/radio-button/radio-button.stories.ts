@@ -6,7 +6,6 @@ const meta: Meta<RadioButtonComponent> = {
   title: 'Components/Radio button',
   tags: ['autodocs'],
   args: {
-    label: "Radio button",
 
   }
 } as Meta;
@@ -17,7 +16,7 @@ type Story = StoryObj<RadioButtonComponent>;
 export const Radiobutton: Story = {
   args: {
     label: 'Radio button',
+    isInvalid: false,
     isDisabled: false,
-    hasError: false,
   }
 }

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/*Upload box*/
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 56px 0;
+  border-radius: 12px;
+  border: 1px dashed #DBE2F0;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  border-color: #95A2BD;
+}
+
+.dragover {
+  background-color: #F5F9FF;
+  border-style: solid;
+}
+
+/*ïnfo*/
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.info .material-icons .icon i {
+  font-size: 80px;
+  color: #95A2BD;
+
+}
+
+.info span {
+  font-size: 14px;
+  color: #95A2BD;
+  word-wrap: break-word;
+}
+
+.uploading,
+.uploaded {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #DBE2F0;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.progress-status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #EFF3FA;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #0066FF;
+  border-radius: 10px;
+}
+
+.progress-label {
+  color: #252B37;
+  font-size: 14px;
+}
+
+.btn-close {
+  background-color: transparent;
+}
+
+.btn-close .mat-icon:hover {
+  color: #8A121C;
+}
+
+.uploaded .close,
+.uploading .close {
+  color: #CB0717;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.file-name {
+  color: #252B37;
+  font-size: 14px;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  color: #95A2BD;
+  font-size: 10px;
+}
+
+/*Button*/
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+  flex-shrink: 0;
+
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1%;
+
+  border-radius: 8px;
+  background: #0041A3;
+  border: none;
+}
+
+button:hover {
+  background: #0058DB;
+}
+
+.button-sm {
+  height: 36px;
+  min-width: 110px;
+  font-size: 14px;
+}

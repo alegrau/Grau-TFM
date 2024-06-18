@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  height: 60vh;
+}
+
+/*Button*/
+.open-modal-btn,
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 1%;
+  height: 48px;
+
+  border-radius: 8px;
+  background-color: #0058DB;
+  border: none;
+}
+
+.open-modal-btn:hover,
+.btn:hover {
+  background-color: #0041A3;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 43, 55, 0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 24px;
+  max-width: 500px;
+  position: relative;
+  border-radius: 12px;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.material-icons {
+  font-size: 56px;
+  color: #0066FF;
+  text-align: center;
+}
+
+.material-icons.icon {
+  font-size: 56px;
+}
+
+.modal-content h2 {
+  font-size: 27px;
+  color: #0066FF;
+  text-align: center;
+  margin: 0;
+}
+
+.modal-content p {
+  color: #252B37;
+  text-align: center;
+  margin: 0;
+}
+
+
+.modal-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.modal-btn {
+  width: 180px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.modal-btn.cancel-btn {
+  border: 1px solid #0066FF;
+  background-color: white;
+  color: #0066FF;
+}
+
+.modal-btn.cancel-btn:hover {
+  background-color: #F5F9FF;
+}
+
+.close-modal-btn {
+  background-color: transparent;
+  color: #95A2BD;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  font-size: 16px;
+}
+
+.close-icon {
+  color: var(--Neutral-400);
+  font-size: 16px;
+}

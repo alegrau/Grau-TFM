@@ -6,7 +6,7 @@ const meta: Meta<TextAreaComponent> = {
   title: 'Components/Text area',
   tags: ['autodocs'],
   args: {
-    placeholder: "Placeholder",
+
 
   }
 } as Meta;
@@ -23,6 +23,6 @@ export const TextArea: Story = {
     hasHelpText: true,
     helpText: 'Help text',
     disabled: false,
-    error: false,
+    invalid: false,
   }
 }
