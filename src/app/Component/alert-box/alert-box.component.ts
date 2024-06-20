@@ -17,32 +17,21 @@ export class AlertBoxComponent {
   @Input() icon: string = 'info';
   @Input() title: string = '';
   @Input() message: string = '';
-  
+
   isVisible: boolean = true;
 
-  @Output() close = new EventEmitter<void>(); // Output event for close button
+  @Output() close = new EventEmitter<void>();
 
   onClose() {
-    this.isVisible = false; // Oculta el componente
-    this.close.emit(); // Emite el evento de cierre
+    this.isVisible = false;
+    this.close.emit();
   }
 
   public get classes(): string[] {
     return getStyles(this.type)
 
   }
-  // private getStyles(type: string): string[] {
-  //   switch (type) {
-  //     case 'success':
-  //       return ['alert-box', 'success'];
-  //     case 'warning':
-  //       return ['alert-box', 'warning'];
-  //     case 'error':
-  //       return ['alert-box', 'error'];
-  //     default:
-  //       return ['alert-box', 'info'];
-  //   }
-  // }
+
 
 
 }

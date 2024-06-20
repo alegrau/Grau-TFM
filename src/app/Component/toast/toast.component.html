@@ -1,4 +1,4 @@
-<div [ngClass]="classes" class="toast">
+<div *ngIf="isVisible" [ngClass]="classes" class="toast">
   <div class="alert-it">
     <div class="alert-icon">
       <mat-icon class="left-icon">{{ icon }}</mat-icon>

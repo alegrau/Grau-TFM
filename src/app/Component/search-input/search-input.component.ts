@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-search-input',
   standalone: true,
@@ -31,5 +32,4 @@ export class SearchInputComponent {
       searchInput.focus();
     }
   }
-
 }

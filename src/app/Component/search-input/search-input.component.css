@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import '~material-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 body {
   display: flex;
@@ -45,7 +46,6 @@ body {
   transition: border-color 0.3s;
   font-family: 'Open Sans', sans-serif;
   color: #252B37;
-  background-color: #ffffff;
 }
 
 .search-input:focus {

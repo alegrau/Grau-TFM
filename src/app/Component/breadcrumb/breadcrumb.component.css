@@ -13,7 +13,7 @@
 
 .breadcrumb span {
   color: #616C84;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -22,7 +22,7 @@
 
 .breadcrumb .last-step {
   color: #0066FF;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;

@@ -21,7 +21,8 @@ type Story = StoryObj<CheckboxComponent>;
 
 export const Checkbox: Story = {
   args: {
-    label: "Label checkbox",
+    label: 'Text',
+    checked: false,
     state: 'valid'
   }
 }

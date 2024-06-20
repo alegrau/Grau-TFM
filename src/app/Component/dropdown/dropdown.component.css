@@ -1,32 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import '~material-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* dropdown.component.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*container*/
 .dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   position: relative;
-  display: inline-block;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0px 12px;
+  border-radius: 8px;
+  border: 1px solid #DBE2F0;
+  font-family: 'Open Sans', sans-serif;
+  color: #252B37;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.select:hover {
+  border-color: #0066FF;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #0066FF;
+  box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+  color: #252B37;
+}
+
+.select:active {
+  outline: none;
+  border-color: #0066FF;
+  box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+  color: #252B37;
+}
+
+.select:disabled,
+p:disabled,
+span:disabled {
+  cursor: not-allowed;
+  color: #95A2BD;
+  background-color: #DBE2F0;
+}
+
+.invalid {
+  border-color: #CB0717 !important;
+  box-shadow: 0px 0px 4px 2px rgba(240, 18, 36, 0.20);
+}
+
+.invalid~.help-text {
+  color: #CB0717;
+}
+
+/*text*/
+label,
+span,
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1%;
+  color: #252B37;
+}
+
+span {
+  color: #252B37;
 }
 
 label {
-  display: block;
-}
-
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  color: #252B37;
+  font-size: 14px;
 }
 
 .help-text {
-  font-size: 12px;
-  color: #888;
+  color: #252B37;
+  font-size: 11px;
+  margin-top: -4px;
 }
 
-.chevron {
+/*List*/
+.list {
+  display: none;
   position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #888;
+  top: calc(100% + 1px);
+  background-color: #FFFFFF;
+  border: 1px solid #DBE2F0;
+  border-radius: 5px;
+  padding: 0;
+  margin-top: 5px;
+  list-style-type: none;
+  width: 100%;
+}
+
+.list.show {
+  display: block;
+}
+
+.list li {
+  padding: 16px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.list li:hover {
+  background-color: #F5F9FF;
+}
+
+/*Size*/
+.large {
+  height: 48px;
+}
+
+.small {
+  height: 40px;
 }

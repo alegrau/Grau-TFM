@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 56px;
 
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 
   border-radius: 8px;
   border: 1px solid #F6F9FF;
@@ -52,12 +52,12 @@ i.material-icons {
 /*Text*/
 .title {
   color: #252B37;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .description {
   color: #0066FF;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*Orientation*/

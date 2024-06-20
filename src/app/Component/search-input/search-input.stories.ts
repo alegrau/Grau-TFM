@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { SearchInputComponent } from './search-input.component';
 
-
 const meta: Meta<SearchInputComponent> = {
   component: SearchInputComponent,
   title: 'Components/Search',

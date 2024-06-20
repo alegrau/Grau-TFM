@@ -1,7 +1,11 @@
-<!-- tabs.component.html -->
+<div class="tab-bar">
+  <div class="tab" [class.selected]="activeTab === 0" (click)="showTabContent(0)">Label tab</div>
+  <div class="tab" [class.default]="activeTab !== 1" [class.selected]="activeTab === 1" (click)="showTabContent(1)">
+    Label tab</div>
+  <div class="tab disabled" (click)="showTabContent(2)">Label tab</div>
+</div>
 
-<div class="tabs">
-  <div *ngFor="let tab of tabs" [class.selected]="tab.selected" [class.disabled]="tab.disabled" (click)="tabClick(tab)">
-    {{ tab.label }}
-  </div>
+<div class="tab-content">
+  <div class="tab-panel" [class.active]="activeTab === 0">Contenido del Tab 1</div>
+  <div class="tab-panel" [class.active]="activeTab === 1">Contenido del Tab 2</div>
 </div>

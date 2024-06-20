@@ -24,7 +24,7 @@ export const Initials: Story = {
 export const Photo: Story = {
   args: {
     type: 'photo',
-    photoUrl: '/img/profile.jpeg',
+    photoUrl: 'https://via.placeholder.com/100',
     size: 'large',
   }
 }

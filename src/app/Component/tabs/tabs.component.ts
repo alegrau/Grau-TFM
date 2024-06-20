@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,13 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './tabs.component.css'
 })
 export class TabsComponent {
-  @Input() tabs: { label: string, selected?: boolean, disabled?: boolean }[] = [];
+  activeTab = 0;
 
-  tabClick(tab: any) {
-    if (!tab.disabled) {
-      this.tabs.forEach(t => t.selected = false);
-      tab.selected = true;
-    }
+  showTabContent(index: number) {
+    if (index === 2) return;
+    this.activeTab = index;
   }
-
 }

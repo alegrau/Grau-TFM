@@ -28,7 +28,6 @@ export class TextInputComponent {
 
   public get classes(): string[] {
     return getStyles(this.size)
-
   }
 
   handleInputClick(event: Event) {

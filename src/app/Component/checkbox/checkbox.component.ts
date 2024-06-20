@@ -13,35 +13,14 @@ const getStyles = (...args: string[]) => ["checkbox", ...args].filter(Boolean)
 
 export class CheckboxComponent {
 
-  @Input() state: 'valid' | 'invalid' | 'disabled' = 'valid';
-
   @Input() label: string = '';
 
-  @Output() stateChange = new EventEmitter<string>();
+  @Input() checked: boolean = false;
 
-  toggleCheckbox() {
-    if (this.state === 'disabled') return;
 
-    if (this.state === 'valid') {
-      this.state = 'invalid';
-    } else {
-      this.state = 'valid';
-    }
+  @Input() state: 'valid' | 'invalid' | 'disabled' = 'valid';
 
-    this.stateChange.emit(this.state);
-  }
 
-  onFocus() {
-    if (this.state !== 'disabled') {
-      this.state = 'valid';
-    }
-  }
-
-  onBlur() {
-    if (this.state === 'valid') {
-      this.state = 'valid';
-    }
-  }
 
   public get classes(): string[] {
     return getStyles(this.state)
