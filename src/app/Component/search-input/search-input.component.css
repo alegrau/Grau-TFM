@@ -63,13 +63,15 @@ body {
 .clear-button {
   display: none;
   position: absolute;
-  right: 10px;
+  /* right: 10px; */
+  left: 320px;
   background: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
   color: #616C84;
   outline: none;
+  z-index: 1;
 }
 
 .search-input:focus+.clear-button,
